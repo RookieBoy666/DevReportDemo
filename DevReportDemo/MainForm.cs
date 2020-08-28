@@ -45,7 +45,7 @@ namespace DevReportDemo
 
 
             //设置本地化的类
-            BarLocalizer.Active = new CastorBarLocalizer();
+             BarLocalizer.Active = new CastorBarLocalizer();
             SkinHelper.InitSkinGallery(ribbonGalleryBarItem1, true);
             barSubItem2.Caption = "点我选皮肤";
             SkinHelper.InitSkinPopupMenu(barSubItem2);

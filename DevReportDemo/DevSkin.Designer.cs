@@ -35,13 +35,13 @@
             this.barSubItemNavigation = new DevExpress.XtraBars.BarSubItem();
             this.employeesBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.customersBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.officeNavigationBar = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
-            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
-            this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).BeginInit();
@@ -99,6 +99,18 @@
             this.customersBarButtonItem.Id = 45;
             this.customersBarButtonItem.Name = "customersBarButtonItem";
             // 
+            // barSubItem2
+            // 
+            this.barSubItem2.Caption = "barSubItem2";
+            this.barSubItem2.Id = 46;
+            this.barSubItem2.Name = "barSubItem2";
+            // 
+            // ribbonGalleryBarItem1
+            // 
+            this.ribbonGalleryBarItem1.Caption = "ribbonGalleryBarItem1";
+            this.ribbonGalleryBarItem1.Id = 47;
+            this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -134,18 +146,6 @@
             this.officeNavigationBar.TabIndex = 1;
             this.officeNavigationBar.Text = "officeNavigationBar";
             // 
-            // barSubItem2
-            // 
-            this.barSubItem2.Caption = "barSubItem2";
-            this.barSubItem2.Id = 46;
-            this.barSubItem2.Name = "barSubItem2";
-            // 
-            // ribbonGalleryBarItem1
-            // 
-            this.ribbonGalleryBarItem1.Caption = "ribbonGalleryBarItem1";
-            this.ribbonGalleryBarItem1.Id = 47;
-            this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
-            // 
             // barSubItem1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -156,6 +156,7 @@
             this.Controls.Add(this.ribbonControl);
             this.Name = "barSubItem1";
             this.Ribbon = this.ribbonControl;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.Load += new System.EventHandler(this.DevSkin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();

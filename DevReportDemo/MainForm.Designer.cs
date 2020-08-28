@@ -55,7 +55,7 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(221, 247);
+            this.simpleButton1.Location = new System.Drawing.Point(211, 167);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 0;
@@ -64,7 +64,7 @@
             // 
             // print
             // 
-            this.print.Location = new System.Drawing.Point(221, 279);
+            this.print.Location = new System.Drawing.Point(211, 199);
             this.print.Name = "print";
             this.print.Size = new System.Drawing.Size(75, 23);
             this.print.TabIndex = 1;
@@ -73,7 +73,7 @@
             // 
             // edit
             // 
-            this.edit.Location = new System.Drawing.Point(221, 311);
+            this.edit.Location = new System.Drawing.Point(211, 231);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(75, 23);
             this.edit.TabIndex = 2;
@@ -138,7 +138,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 413);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 361);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(843, 23);
             // 
@@ -148,7 +148,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 389);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 337);
             // 
             // barDockControlRight
             // 
@@ -156,7 +156,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(843, 24);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 389);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 337);
             // 
             // ribbonControl
             // 
@@ -228,8 +228,8 @@
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barSubItem2);
             this.ribbonPageGroup1.ItemLinks.Add(this.ribbonGalleryBarItem1);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barSubItem2);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
@@ -237,7 +237,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 436);
+            this.ClientSize = new System.Drawing.Size(843, 384);
             this.Controls.Add(this.ribbonControl);
             this.Controls.Add(this.edit);
             this.Controls.Add(this.print);
@@ -247,7 +247,8 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "打印报表";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
