@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraBars.Helpers;
+using DevExpress.Skins;
 
 namespace DevReportDemo
 {
@@ -47,6 +41,20 @@ namespace DevReportDemo
         private void MainForm_Load(object sender, EventArgs e)
         {
             SkinHelper.InitSkinPopupMenu(MenuSkin);
+
+
+            //SkinHelper.InitSkinPopupMenu(SkinsLink);
+            ////Add skin to combobox
+            //foreach (SkinContainer cn in SkinManager.Default.Skins)
+            //{
+            //    cboSkins.Properties.Items.Add(cn.SkinName);
+            //}
+
         }
+        //private void cboSkins_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    //Set default look and feel
+        //    DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(cboSkins.Text);
+        //}
     }
 }

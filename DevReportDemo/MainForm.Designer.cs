@@ -40,7 +40,10 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.SkinsLink = new System.Windows.Forms.LinkLabel();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // simpleButton1
@@ -148,11 +151,33 @@
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 252);
             // 
+            // SkinsLink
+            // 
+            this.SkinsLink.AutoSize = true;
+            this.SkinsLink.Location = new System.Drawing.Point(13, 31);
+            this.SkinsLink.Name = "SkinsLink";
+            this.SkinsLink.Size = new System.Drawing.Size(59, 14);
+            this.SkinsLink.TabIndex = 7;
+            this.SkinsLink.TabStop = true;
+            this.SkinsLink.Text = "linkLabel1";
+            // 
+            // comboBoxEdit1
+            // 
+            this.comboBoxEdit1.Location = new System.Drawing.Point(83, 4);
+            this.comboBoxEdit1.MenuManager = this.barManager1;
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit1.Size = new System.Drawing.Size(100, 20);
+            this.comboBoxEdit1.TabIndex = 8;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(466, 299);
+            this.Controls.Add(this.comboBoxEdit1);
+            this.Controls.Add(this.SkinsLink);
             this.Controls.Add(this.edit);
             this.Controls.Add(this.print);
             this.Controls.Add(this.simpleButton1);
@@ -164,6 +189,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,6 +208,8 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private System.Windows.Forms.LinkLabel SkinsLink;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
     }
 }
 

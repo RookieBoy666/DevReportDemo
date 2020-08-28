@@ -6,7 +6,7 @@ using DevExpress.UserSkins;
 using DevExpress.Skins;
 using DevExpress.LookAndFeel;
  
-namespace DevReportDemo
+namespace DevReportDemo 
 {
     static class Program
     {
@@ -19,6 +19,11 @@ namespace DevReportDemo
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+
+            DevExpress.UserSkins.BonusSkins.Register();
+            DevExpress.UserSkins.OfficeSkins.Register();
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            DevExpress.Skins.SkinManager.EnableMdiFormSkins();
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
 
