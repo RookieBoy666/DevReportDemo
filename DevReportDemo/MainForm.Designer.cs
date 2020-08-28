@@ -40,15 +40,22 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.SkinsLink = new System.Windows.Forms.LinkLabel();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.skinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.barSubItemNavigation = new DevExpress.XtraBars.BarSubItem();
+            this.employeesBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.customersBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.SuspendLayout();
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(183, 87);
+            this.simpleButton1.Location = new System.Drawing.Point(221, 247);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 0;
@@ -57,7 +64,7 @@
             // 
             // print
             // 
-            this.print.Location = new System.Drawing.Point(183, 119);
+            this.print.Location = new System.Drawing.Point(221, 279);
             this.print.Name = "print";
             this.print.Size = new System.Drawing.Size(75, 23);
             this.print.TabIndex = 1;
@@ -66,7 +73,7 @@
             // 
             // edit
             // 
-            this.edit.Location = new System.Drawing.Point(183, 151);
+            this.edit.Location = new System.Drawing.Point(221, 311);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(75, 23);
             this.edit.TabIndex = 2;
@@ -125,15 +132,15 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(466, 24);
+            this.barDockControlTop.Size = new System.Drawing.Size(843, 24);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 276);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 413);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(466, 23);
+            this.barDockControlBottom.Size = new System.Drawing.Size(843, 23);
             // 
             // barDockControlLeft
             // 
@@ -141,43 +148,97 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 252);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 389);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(466, 24);
+            this.barDockControlRight.Location = new System.Drawing.Point(843, 24);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 252);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 389);
             // 
-            // SkinsLink
+            // ribbonControl
             // 
-            this.SkinsLink.AutoSize = true;
-            this.SkinsLink.Location = new System.Drawing.Point(13, 31);
-            this.SkinsLink.Name = "SkinsLink";
-            this.SkinsLink.Size = new System.Drawing.Size(59, 14);
-            this.SkinsLink.TabIndex = 7;
-            this.SkinsLink.TabStop = true;
-            this.SkinsLink.Text = "linkLabel1";
+            this.ribbonControl.ExpandCollapseItem.Id = 0;
+            this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.ribbonControl.ExpandCollapseItem,
+            this.skinRibbonGalleryBarItem,
+            this.barSubItemNavigation,
+            this.employeesBarButtonItem,
+            this.customersBarButtonItem,
+            this.barSubItem2,
+            this.ribbonGalleryBarItem1});
+            this.ribbonControl.Location = new System.Drawing.Point(0, 24);
+            this.ribbonControl.MaxItemId = 48;
+            this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
+            this.ribbonControl.Name = "ribbonControl";
+            this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPage1});
+            this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
+            this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonControl.Size = new System.Drawing.Size(843, 120);
+            this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
-            // comboBoxEdit1
+            // skinRibbonGalleryBarItem
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(83, 4);
-            this.comboBoxEdit1.MenuManager = this.barManager1;
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(100, 20);
-            this.comboBoxEdit1.TabIndex = 8;
+            this.skinRibbonGalleryBarItem.Id = 14;
+            this.skinRibbonGalleryBarItem.Name = "skinRibbonGalleryBarItem";
+            // 
+            // barSubItemNavigation
+            // 
+            this.barSubItemNavigation.Caption = "Navigation";
+            this.barSubItemNavigation.Id = 15;
+            this.barSubItemNavigation.ImageOptions.ImageUri.Uri = "NavigationBar";
+            this.barSubItemNavigation.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.employeesBarButtonItem),
+            new DevExpress.XtraBars.LinkPersistInfo(this.customersBarButtonItem)});
+            this.barSubItemNavigation.Name = "barSubItemNavigation";
+            // 
+            // employeesBarButtonItem
+            // 
+            this.employeesBarButtonItem.Caption = "Employees";
+            this.employeesBarButtonItem.Id = 44;
+            this.employeesBarButtonItem.Name = "employeesBarButtonItem";
+            // 
+            // customersBarButtonItem
+            // 
+            this.customersBarButtonItem.Caption = "Customers";
+            this.customersBarButtonItem.Id = 45;
+            this.customersBarButtonItem.Name = "customersBarButtonItem";
+            // 
+            // barSubItem2
+            // 
+            this.barSubItem2.Caption = "barSubItem2";
+            this.barSubItem2.Id = 46;
+            this.barSubItem2.Name = "barSubItem2";
+            // 
+            // ribbonGalleryBarItem1
+            // 
+            this.ribbonGalleryBarItem1.Caption = "ribbonGalleryBarItem1";
+            this.ribbonGalleryBarItem1.Id = 47;
+            this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1});
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "ribbonPage1";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.barSubItem2);
+            this.ribbonPageGroup1.ItemLinks.Add(this.ribbonGalleryBarItem1);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 299);
-            this.Controls.Add(this.comboBoxEdit1);
-            this.Controls.Add(this.SkinsLink);
+            this.ClientSize = new System.Drawing.Size(843, 436);
+            this.Controls.Add(this.ribbonControl);
             this.Controls.Add(this.edit);
             this.Controls.Add(this.print);
             this.Controls.Add(this.simpleButton1);
@@ -189,7 +250,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,8 +269,15 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private System.Windows.Forms.LinkLabel SkinsLink;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem;
+        private DevExpress.XtraBars.BarSubItem barSubItemNavigation;
+        private DevExpress.XtraBars.BarButtonItem employeesBarButtonItem;
+        private DevExpress.XtraBars.BarButtonItem customersBarButtonItem;
+        private DevExpress.XtraBars.BarSubItem barSubItem2;
+        private DevExpress.XtraBars.RibbonGalleryBarItem ribbonGalleryBarItem1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
     }
 }
 

@@ -2,6 +2,7 @@
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraBars.Helpers;
 using DevExpress.Skins;
+using DevExpress.XtraBars.Localization;
 
 namespace DevReportDemo
 {
@@ -43,6 +44,12 @@ namespace DevReportDemo
             SkinHelper.InitSkinPopupMenu(MenuSkin);
 
 
+            //设置本地化的类
+            BarLocalizer.Active = new CastorBarLocalizer();
+            SkinHelper.InitSkinGallery(ribbonGalleryBarItem1, true);
+            barSubItem2.Caption = "点我选皮肤";
+            SkinHelper.InitSkinPopupMenu(barSubItem2);
+
             //SkinHelper.InitSkinPopupMenu(SkinsLink);
             ////Add skin to combobox
             //foreach (SkinContainer cn in SkinManager.Default.Skins)
@@ -56,5 +63,21 @@ namespace DevReportDemo
         //    //Set default look and feel
         //    DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(cboSkins.Text);
         //}
+
+
+        //该类确定本地化的实际工作方式
+        public class CastorBarLocalizer : BarLocalizer
+        {
+            public override string GetLocalizedString(BarString id)
+            {
+                if (id == BarString.SkinCaptions)
+                {
+                    string str = base.GetLocalizedString(id);
+                    //实现本地化，实际上就是替换字符串
+                    return str.Replace("|DevExpress Style|", "|Castor的皮肤|");
+                }
+                return base.GetLocalizedString(id);
+            }
+        }
     }
 }
