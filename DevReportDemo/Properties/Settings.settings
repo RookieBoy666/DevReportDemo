@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="Name" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Nmae</Value>
+      <Value Profile="(Default)">studentname</Value>
     </Setting>
   </Settings>
 </SettingsFile>

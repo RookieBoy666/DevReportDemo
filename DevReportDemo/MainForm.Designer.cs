@@ -240,7 +240,7 @@
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 7;
-            this.simpleButton2.Text = "预览2";
+            this.simpleButton2.Text = "预览2(传参)";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // MainForm
