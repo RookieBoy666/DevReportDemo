@@ -79,5 +79,14 @@ namespace DevReportDemo
                 return base.GetLocalizedString(id);
             }
         }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            // 创建报表
+            ReportTransferPara report = new ReportTransferPara();
+            //显示预览
+            ReportPrintTool tool = new ReportPrintTool(report);
+            tool.ShowPreview();
+        }
     }
 }

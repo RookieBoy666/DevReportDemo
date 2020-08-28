@@ -49,6 +49,7 @@
             this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.SuspendLayout();
@@ -233,11 +234,21 @@
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(292, 167);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton2.TabIndex = 7;
+            this.simpleButton2.Text = "预览2";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 384);
+            this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.ribbonControl);
             this.Controls.Add(this.edit);
             this.Controls.Add(this.print);
@@ -279,6 +290,7 @@
         private DevExpress.XtraBars.RibbonGalleryBarItem ribbonGalleryBarItem1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }
 

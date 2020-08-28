@@ -91,6 +91,12 @@
     <Compile Include="DevSkin.Designer.cs">
       <DependentUpon>DevSkin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportTransferPara.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportTransferPara.Designer.cs">
+      <DependentUpon>ReportTransferPara.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DevSkin.resx">
       <DependentUpon>DevSkin.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +115,9 @@
     </Compile>
     <EmbeddedResource Include="Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportTransferPara.resx">
+      <DependentUpon>ReportTransferPara.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="DBFile\test.bak" />
