@@ -5,8 +5,7 @@ using System.Windows.Forms;
 using DevExpress.UserSkins;
 using DevExpress.Skins;
 using DevExpress.LookAndFeel;
-
-using DevExpress.LookAndFeel;
+ 
 namespace DevReportDemo
 {
     static class Program
@@ -22,12 +21,10 @@ namespace DevReportDemo
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
-            UserLookAndFeel.Default.SetSkinStyle("DevExpress Dark Style");
 
 
 
-
-
+       //     UserLookAndFeel.Default.SetSkinStyle("DevExpress Dark Style");
             //UserLookAndFeel.Default.SetSkinStyle("Office 2010 Blue");//皮肤主题
 
             //     | DevExpress Style | Caramel | Money Twins | DevExpress Dark Style| iMaginary
@@ -44,7 +41,7 @@ namespace DevReportDemo
 
 
 
-            Application.Run(new Form1());
+            Application.Run(new MainForm());
         }
     }
 }

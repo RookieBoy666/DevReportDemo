@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraReports.UI;
+using DevExpress.XtraBars.Helpers;
+
 namespace DevReportDemo
 {
-    public partial class Form1 : DevExpress.XtraEditors.XtraForm
+    public partial class MainForm : DevExpress.XtraEditors.XtraForm
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -40,6 +42,11 @@ namespace DevReportDemo
             //设计报表
             tool.ShowDesignerDialog();
 
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            SkinHelper.InitSkinPopupMenu(MenuSkin);
         }
     }
 }
