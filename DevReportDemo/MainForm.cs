@@ -1,13 +1,31 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
+using DevExpress.XtraEditors;
+
+using DevExpress.XtraNavBar;
+using System.Reflection;
+using DevExpress.XtraBars.Ribbon;
+
+using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
+using DevExpress.XtraBars.Docking2010.Customization;
+using DevExpress.XtraBars.Docking2010;
+using DevExpress.XtraBars.Docking2010.Views.Tabbed;
 using DevExpress.XtraReports.UI;
-using DevExpress.XtraBars.Helpers;
-using DevExpress.Skins;
 using DevExpress.XtraBars.Localization;
+using DevExpress.XtraBars.Helpers;
 
 namespace DevReportDemo
 {
     public partial class MainForm : DevExpress.XtraEditors.XtraForm
     {
+        public int menuType = 0;
+        public bool restart = false;
+        public bool close = false;
+        public bool changeuser = false;
         public MainForm()
         {
             InitializeComponent();
@@ -87,6 +105,49 @@ namespace DevReportDemo
             //显示预览
             ReportPrintTool tool = new ReportPrintTool(report);
             tool.ShowPreview();
+        }
+        private static bool canCloseFunc(DialogResult parameter)
+        {
+            return parameter != DialogResult.Cancel;
+        }
+        private void MainForm_FormClosing(object sender,  FormClosingEventArgs e)
+        {
+            DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction action = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutAction() { Caption = "友情提示", Description = "是否关闭此应用程序?" };
+            Predicate<DialogResult> predicate = canCloseFunc;
+            DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand command1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand() { Text = "关闭", Result = System.Windows.Forms.DialogResult.Yes };
+            DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand command2 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand() { Text = "取消", Result = System.Windows.Forms.DialogResult.No };
+            DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand command3 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand() { Text = "重启", Result = System.Windows.Forms.DialogResult.Retry };
+            DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand command4 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.FlyoutCommand() { Text = "切换用户", Result = System.Windows.Forms.DialogResult.Ignore };
+            action.Commands.Add(command1);
+            action.Commands.Add(command2);
+            action.Commands.Add(command3);
+            action.Commands.Add(command4);
+            FlyoutProperties properties = new FlyoutProperties();
+            properties.ButtonSize = new Size(100, 40);
+            properties.Style = FlyoutStyle.MessageBox;
+            properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            DialogResult result = FlyoutDialog.Show(this, action, properties, predicate);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.close = true;
+                e.Cancel = false;
+            }
+            else if (result == System.Windows.Forms.DialogResult.Retry)
+            {
+                System.Diagnostics.Process.Start(System.Reflection.Assembly.GetExecutingAssembly().Location, "restart");
+                System.Environment.Exit(0);
+                //this.restart = true;
+                //e.Cancel = false;
+            }
+            else if (result == System.Windows.Forms.DialogResult.Ignore)
+            {
+                this.changeuser = true;
+                e.Cancel = false;
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
