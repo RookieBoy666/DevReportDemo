@@ -17,6 +17,8 @@ using DevExpress.XtraBars.Docking2010.Views.Tabbed;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraBars.Localization;
 using DevExpress.XtraBars.Helpers;
+using DevExpress.LookAndFeel;
+using DevReportDemo.Helper;
 
 namespace DevReportDemo
 {
@@ -74,8 +76,17 @@ namespace DevReportDemo
             //{
             //    cboSkins.Properties.Items.Add(cn.SkinName);
             //}
+            UserLookAndFeel.Default.StyleChanged += Default_StyleChanged;
+            UserLookAndFeel.Default.SkinName = ConfigHelper.GetConfigVal("ApplicationSkinName");
+
 
         }
+        private void Default_StyleChanged(object sender, EventArgs e)
+        {
+            string selectedSkin = UserLookAndFeel.Default.SkinName;
+            ConfigHelper.SetConfigVal("ApplicationSkinName", selectedSkin);//保存选择的皮肤
+        }
+
         //private void cboSkins_SelectedIndexChanged(object sender, EventArgs e)
         //{
         //    //Set default look and feel
